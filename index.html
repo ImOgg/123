@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <div class="test" id="app">
+      <h1>{{title}}</h1>
+      <p>{{price*discount}}</p>
+      <p v-html="content"></p>
+      <a v-bind:href="link">google</a>
+    </div> -->
+    <div id="app">
+      <div class="ticket">
+        <div class="date">{{ticket.date}}</div>
+        <div class="info">{{company}}</div>
+        <div class="info">{{ticket.direction=="south"?"南下":"北上"}}</div>
+        <div class="station">{{ticket.from}}站</div>
+        <div class="station">{{ticket.to}}站</div>
+        <div class="info">售價{{ticket.price*ticket.discount}}元</div>
+        <div class="info">{{ticket.other}}</div>
+        <a v-bind:href="ticket.link">google</a>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
